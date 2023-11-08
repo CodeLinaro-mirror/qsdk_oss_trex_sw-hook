@@ -19,7 +19,7 @@
 #include <linux/seq_file.h>
 #include <linux/miscdevice.h>
 
-extern int (*swhook_net_recv) (struct sk_buff ** pskb);
+int (*swhook_net_recv) (struct sk_buff ** pskb);
 
 int (*omciibc_net_recv)(struct sk_buff **pskb) __rcu __read_mostly;
 EXPORT_SYMBOL_GPL(omciibc_net_recv);
